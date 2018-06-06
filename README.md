@@ -4,7 +4,7 @@ UC1: ACCOGLIENZA ALLIEVO.
 1- Una persona si presenta al centro per richiedere la partecipazione ad un’ attivita di formazione giornaliera.
 2- Il responsabile del centro controlla se la persona risulta gia’ registrata nel Sistema.
 3a- In caso affermativo il responsabile procede con il recupero delle informazioni anagrafiche e la registrazione all’ attivita’ richiesta dal suddetto.
-3b- Altrimenti il responsabile verifica che la capienza massima del centro non sia stata raggiunta raccoglie e registra le informazioni anagrafiche del nuovo allievo (nome, cognome, email, telefono, data e luogo di nascita) e procede alla registrazione all’ attivita’ richiesta dal suddetto.
+3b- Altrimenti il responsabile verifica che la capienza massima del centro non sia stata raggiunta raccoglie e registra le informazioni anagrafiche del nuovo allievo (nome, cognome, email, telefono, data e luogo di nascita).
 
 UC2: AGGIUNTA ALLIEVO ALL’ ATTIVITA’.
 1- Il responsabile del centro richiede dall’ allievo quale/i attivita’ di formazione vuole svolgere.
