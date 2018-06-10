@@ -1,0 +1,41 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+	<div>
+		<h4 class="title">Inserisci una nuova Attivita</h4>
+		<p th:text="${exists}"></p>
+	</div>
+	<form th:action="@{/attivita}" method="POST" th:object="${attivita}">
+		<table>
+			<tr>
+				<td>Nome:</td>
+				<td><input type="text" th:field="*{nomeAttivita}" /></td>
+				<td th:if="${#fields.hasErrors('nomeAttivita')}" th:errors="*{nomeAttivita}"></td>
+			</tr>		
+			<tr>
+				<td>Data di svolgimento:</td>
+				<td><input type="date" th:field="*{data}" /></td>
+				<td th:if="${#fields.hasErrors('data')}" th:errors="*{data}"></td>
+			</tr>
+			<tr>
+				<td>Orario di inizio:</td>
+				<td><input type="date" th:field="*{data}" /></td>
+				<td th:if="${#fields.hasErrors('data')}" th:errors="*{data}"></td>
+			</tr>	
+			<tr>
+				<td>Orario di fine:</td>
+				<td><input type="date" th:field="*{data}" /></td>
+				<td th:if="${#fields.hasErrors('data')}" th:errors="*{data}"></td>
+			</tr>
+			
+			<tr>
+				<td><button type="submit">Procedi</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
