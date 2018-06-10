@@ -25,30 +25,37 @@ public class AllievoController {
     private AllievoValidator validator;
 
     @RequestMapping("/allievi")
-    public String customers(Model model) {
+    public String allievi(Model model) {
         model.addAttribute("allievi", this.allievoService.findAll());
         return "allievoList";
     }
 
     @RequestMapping("/addAllievo")
-    public String addCustomer(Model model) {
+    public String addAllievo(Model model) {
         model.addAttribute("allievo", new Allievo());
         return "allievoForm";
     }
-
+    
+ /*   @RequestMapping("/findAllievo")
+    public String findAllievo(Model model) {
+    model.addAttribute("allievo");
+    	return "findAllievo";
+    }
+    */
+    
     @RequestMapping(value = "/allievo/{id}", method = RequestMethod.GET)
-    public String getCustomer(@PathVariable("id") Long id, Model model) {
+    public String getAllievo(@PathVariable("id") Long id, Model model) {
         model.addAttribute("allievo", this.allievoService.findById(id));
     	return "showAllievo";
     }
 
     @RequestMapping(value = "/allievo", method = RequestMethod.POST)
-    public String newCustomer(@Valid @ModelAttribute("allievo") Allievo allievo, 
+    public String newAllievo(@Valid @ModelAttribute("allievo") Allievo allievo, 
     									Model model, BindingResult bindingResult) {
         this.validator.validate(allievo, bindingResult);
         
         if (this.allievoService.alreadyExists(allievo)) {
-            model.addAttribute("exists", "Customer already exists");
+            model.addAttribute("exists", "Questo allievo e' gia registrato");
             return "allievoForm";
         }
         else {

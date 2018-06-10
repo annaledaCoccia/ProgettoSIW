@@ -1,0 +1,25 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <title>Attivita</title>
+</head>
+<body>
+    <div>
+    	<h4>Attivita</h4>
+		<div>
+			<span th:text="${attivita.nomeAttivita}"></span>
+   		</div>
+
+		<div>
+			<span th:text="${attivita.data}"></span>
+   		</div>
+   		<div>
+			<span th:text="${attivita.datainizio}"></span>
+   		</div>
+   		<div>
+			<span th:text="${attivita.datafine}"></span>
+   		</div>
+  
+    </div>
+</body>
+</html>

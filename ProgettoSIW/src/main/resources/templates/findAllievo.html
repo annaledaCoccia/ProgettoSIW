@@ -1,0 +1,18 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<meta charset="UTF-8">
+<title>Cerca allievo</title>
+</head>
+<body>
+<form th:action="@{/findAllievo}" th:object="${allievo}">
+<table><tr>
+		<td>Cognome:</td>
+				<td><input type="text"/></td>
+			<tr>
+				<td><button type="submit">Procedi</button></td>
+			</tr>
+	</table></form>
+</body>
+</html> 

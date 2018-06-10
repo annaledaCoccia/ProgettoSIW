@@ -29,8 +29,13 @@ public class AllievoService {
 		public List<Allievo> findByNome(String nome) {
 			return this.allievoRepository.findByNome(nome);
 		}
-		public List<Allievo> findByCogome(String cognome) {
-			return this.allievoRepository.findByNome(cognome);
+		
+		public List<Allievo> findByNomeAndCognome(String nome, String cognome){
+			return this.allievoRepository.findByNomeAndCognome(nome, cognome);
+		}
+		
+		public List<Allievo> findByCognome(String cognome) {
+			return this.allievoRepository.findByCognome(cognome);
 		}
 
 	    public void add(final Allievo allievo) {
